@@ -1,8 +1,10 @@
 /*
 Debemos lograr tomar un nombre con 'prompt' 
-y luego mostrarlo por 'alert' al presionar el botón  'mostrar'*/
-function mostrar()
-{
-	alert("ok");
-}
+y luego mostrarlo por 'alert' al presionar el botón  'mostrar'
+*/
 
+function mostrar() {
+  var dato;
+  dato = prompt("Ingrese un dato");
+  alert(dato);
+}
