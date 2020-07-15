@@ -31,7 +31,7 @@ function Circulo() {
   largoDelTerreno = parseFloat(largoDelTerreno);
   anchoDelTerreno = parseFloat(anchoDelTerreno);
 
-  perimetro = 2 * 3.14 * radioDelTerreno;
+  perimetro = 2 * Math.PI * radioDelTerreno;
   resultado = perimetro * 3;
 
   alert("La cantidad de alambre a comprar es: " + resultado.toFixed(2));
@@ -42,7 +42,6 @@ function Materiales() {
   var anchoDelTerreno;
   var cantidadDeCemento;
   var cantidadDeCal;
-  var resultado;
 
   largoDelTerreno = txtIdLargo.value;
   anchoDelTerreno = txtIdAncho.value;
@@ -52,5 +51,10 @@ function Materiales() {
   cantidadDeCemento = largoDelTerreno * anchoDelTerreno * 2;
   cantidadDeCal = largoDelTerreno * anchoDelTerreno * 3;
 
-  //alert("La cantidad de alambre a comprar es: " + resultado.toFixed(2));
+  alert(
+    "La cantidad de cemento es: " +
+      cantidadDeCemento +
+      " y la cantidad de cal es: " +
+      cantidadDeCal
+  );
 }
