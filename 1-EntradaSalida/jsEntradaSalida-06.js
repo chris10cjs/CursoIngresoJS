@@ -10,6 +10,7 @@ function sumar() {
 
   numeroUno = parseInt(txtIdNumeroUno.value);
   numeroDos = parseInt(txtIdNumeroDos.value);
+
   suma = numeroUno + numeroDos;
 
   alert(suma);
