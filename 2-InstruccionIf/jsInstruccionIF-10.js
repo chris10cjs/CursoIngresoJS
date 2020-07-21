@@ -6,15 +6,24 @@ Al presionar el Botón, asignar una nota RANDOM al examen y mostrar:
 "Vamos, la proxima se puede" para notas menores a 4
 */
 
-function mostrar() {
-  var numero;
-  numero = Math.floor(Math.random() * 10) + 1;
+function mostrar()
+{
+  var nota;
+  nota = Math.floor(Math.random() * 10) + 1;
 
-  if (numero == 9 && numero == 10) {
-    alert(numero + " EXELENTE");
-  } else if (numero > 3) {
-    alert(numero + " APROBÓ");
-  } else {
-    alert(numero + " Vamos, la próxima se puede");
+  if (nota > 8)
+  {
+    alert("EXELENTE");
+  }
+  else
+  { 
+    if (nota > 3)
+    {
+      alert("APROBÓ");
+    }
+    else
+    {
+      alert("Vamos, la próxima se puede");
+    }
   }
 }
