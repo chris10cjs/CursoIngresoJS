@@ -1,6 +1,19 @@
+/* Enunciado:
+Al seleccionar un destino informar si hace FRIO o CALOR en ese destino */
+
 function mostrar()
 {
-	var destinoIngresado =txtIdDestino.value;
-	alert(destinoIngresado);
-
-}//FIN DE LA FUNCIÓN
+	var destinoIngresado;
+	destinoIngresado = txtIdDestino.value;
+	
+	switch (destinoIngresado)
+	{
+		case "Cataratas":
+		case ("Mar del plata"):
+			alert ("CALOR");
+			break;
+		default:
+			alert ("FRIO");
+			break;
+	}
+}
