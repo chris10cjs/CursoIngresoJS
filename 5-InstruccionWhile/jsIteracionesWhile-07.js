@@ -4,15 +4,32 @@ e informar la suma acumulada y el promedio.
 */
 function mostrar()
 {
-	var contador;
+	var i;
 	var acumulador;
 	var respuesta;
-	contador=0;
-	acumulador=0;
-	respuesta='si';
+	var numeroIngresado;
+	var promedio;
+
+	i = 0;
+	acumulador = 0;
+	respuesta = true; //forzar a ejecutarse 1 vez
 
 
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/contador;
+	while(respuesta == true) //variable de estado
+	{
+		numeroIngresado = prompt("Ingrese un numero: ");
+		numeroIngresado = parseInt(numeroIngresado);
 
-}//FIN DE LA FUNCIÓN
+		//acumulador = acumulador + numeroIngresado;
+		acumulador += numeroIngresado;
+		i++;
+
+		respuesta = confirm("Desea ingresar otro numero?");
+	}
+
+	promedio = acumulador / i;
+	promedio = promedio.toFixed(2);
+
+	txtIdSuma.value = acumulador;
+	txtIdPromedio.value = promedio;
+}
