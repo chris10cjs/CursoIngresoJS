@@ -4,13 +4,11 @@ sumar los que son positivos y multiplicar los negativos.*/
 
 function mostrar()
 {
-	var i;
 	var respuesta;
 	var sumaPositivos;
 	var multiplicacionNegativos;
 	var numeroIngresado;
 
-	i = 0;
 	sumaPositivos = 0;
 	multiplicacionNegativos = 1;
 	respuesta = true;
@@ -28,10 +26,11 @@ function mostrar()
 		}
 		else
 		{
-			multiplicacionNegativos = multiplicacionNegativos * numeroIngresado;
+			if(numeroIngresado < 0)
+			{
+				multiplicacionNegativos = multiplicacionNegativos * numeroIngresado;
+			}
 		}
-
-		i++;
 	}
 
 	txtIdSuma.value=sumaPositivos;

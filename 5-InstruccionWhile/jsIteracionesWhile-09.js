@@ -10,30 +10,39 @@ function mostrar()
 	var numeroMinimo;
 	var respuesta;
 
-	bandera = 0;
+	bandera = 0; // podriamos usar contador para que inicie por primera vez
+	
+	// siempre se inicializan
+	// bandera = boolean;
+	// contador = variable + constante;
+	// acumulador = variable + otraVariable; 
 
 	do
 	{
-		numeroIngresado = prompt("Ingrese un numero: ");
-		numeroIngresado = parseInt(numeroIngresado);
-		
-		if(bandera == 0)
+		do
 		{
-			numeroMaximo = numeroIngresado;
-			numeroMinimo = numeroIngresado;
-			bandera = 1;
-		}
-		if(numeroIngresado > numeroMaximo)
-		{
-			numeroMaximo = numeroIngresado;
-		}
-		else
-		{
-			if(numeroIngresado < numeroMinimo)
+			numeroIngresado = prompt("Ingrese un numero: ");
+			numeroIngresado = parseInt(numeroIngresado);
+			
+			if(bandera == 0)
 			{
+				numeroMaximo = numeroIngresado;
 				numeroMinimo = numeroIngresado;
+				bandera = 1;
 			}
-		}
+			if(numeroIngresado > numeroMaximo)
+			{
+				numeroMaximo = numeroIngresado;
+			}
+			else
+			{
+				if(numeroIngresado < numeroMinimo)
+				{
+					numeroMinimo = numeroIngresado;
+				}
+			}
+
+		}while(isNaN(numeroIngresado));
 
 		respuesta = confirm("desea continuar?");
 
